@@ -6,9 +6,6 @@
     $username = strip_tags($_POST['username']);
     $password = strip_tags($_POST['password']);
 
-    $username = stripcslashes($username);
-    $password = stripcslashes($password);
-
     $username = mysqli_real_escape_string($koneksi, $username);
     $password = mysqli_real_escape_string($koneksi, $password);
 
