@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+  background-color: white;
+
+}
+
+#header {
+  background-color: #FF8C00;
+  color: white;
+  padding : 10px;
+  display: flex;
+  margin-bottom: 40px;
+}
+#header img {
+  width: 150px;
+  height: 100px;
+  float: left;
+  padding: 5px;
+
+}
+
+#header .selamat {margin-top: 20px;}
+
+.kanan {text-align: right; }
+
+
+
+#content {
+  float: left;
+  width: 60%;
+  height: auto;
+  background-color: white;
+  clear: both;
+
+
+}
+#content img {
+  width: 850px;
+  height: 350px;
+  padding: 10px;
+
+}
+#content h2 {
+
+}
+
+#content video {
+  
+}
+
+#main {
+  float: right;
+  width: 30%;
+  padding: 10px;
+  background-color: #FFFACD;
+}
+
+
+#main .floatdaftar {float: right;}
+
+
+
+#footer {
+  clear: both;
+  padding: 10px;
+  text-align:left;
+  background-color:	white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+
+}
+
+.h5 {margin-left: 38px; }
+
+#footer .copyright {
+  text-align: right;
+}
+#icons {padding:5px 0 0 0}
+#icons li {float:left;padding:10px;}
+#footer ul{list-style: none;}

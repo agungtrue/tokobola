@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Website </title>
+</head>
+<body>
+
+  <div id="container">
+    <div id="header">
+      <a href="index.html" id="logo"> <img src="image/logotokbol.png"/></a>
+      <div class="selamat">
+        <h4> Selamat Datang di Toko Bola </h4>
+      </div>
+
+    </div>
+
+      <div id="content">
+        <h4> Temukan Kebutuhan Anda! </h4>
+        <hr> <br>
+
+          <img src="image/foto1.jpg"/>
+
+      </div>
+
+        <div id="main">
+          <div class="login">
+          <h5> Login </h5>
+            <form action="proses_login.php" method="post">
+              Username<br>
+              <input type="text" name="username" value=""/> <br><br>
+              Password<br>
+              <input type="password" name="password" value=""/><br><br>
+              <input class="masuk" type="submit" name="masuk" value="Masuk"/>
+            </form><br><br><hr>
+          </div>
+
+            <div class="daftar">
+              <h5> Daftar </h5>
+                <form action="proses_daftar.php" method="post">
+                <table>
+                  <tr>
+                    <td>Nama Lengkap</td>
+                    <td><input type="text" name="nama_lengkap" value=""/></td>
+                  </tr>
+                  <tr>
+                    <td>Jenis Kelamin</td>
+                    <td>
+                      <select class="gender" name="gender">
+                        <option value="0">---- Pilih Jenis Kelamin ---</option>
+                        <option value="1">Laki-laki</option>
+                        <option value="2">Perempuan</option>
+                      </select>
+                    </td>
+
+                  </tr>
+                  <tr>
+                    <td>Alamat</td>
+                    <td>
+                      <textarea class="alamat" name="alamat" cols="30" rows="5"></textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="username" value=""/></td>
+                  </tr>
+                  <tr>
+                    <td>Password</td>
+                    <td><input type="password" name="password" value=""/></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2"> <br><br>
+                    <input class="floatdaftar" type="submit" name="submit" value="Daftar"/><br>
+                      <div id="loading_daftar"> Loading...</div> <br>
+                      <div id="Keterangan"></div>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+        </div>
+
+          <div id="footer">
+            <hr>
+      						<h5 class="h5">Follow Us </h5>
+      						<ul id="icons">
+                    <li><a href="#" target="_blank" class="normaltip" title="facebook"><img src="image/fb.png" style="height:31px; width:31px;" alt=""> </a></li>
+                    <li><a href="#" target="_blank" class="normaltip" title="Instagram"><img src="image/ig.png" style="height:31px; width:31px;" alt=""> </a></li>
+                    <li><a href="#" target="_blank" class="normaltip" title="Twitter"><img src="image/tw.png" style="height:31px; width:31px;" alt=""> </a></li>
+
+      						</ul>
+            <div class="copyright">
+            Copyright &copy: 2017 Team Uler
+            </div>
+
+          </div>
+
+  </div>
+
+
+</body>
+</html>
