@@ -24,7 +24,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 
-    <title>Proses Login</title>
+    <title>Home</title>
   </head>
 
     <body>
@@ -48,7 +48,7 @@
 
         <div class="logout-user">
           <div class="user">
-            <h4> Selamat Datang <?=$_SESSION['user']['username']?> | <?=$_SESSION['user']['email']?></h4>
+            <h4 style="color:orange;"> Selamat Datang <?=$_SESSION['user']['username']?> | <?=$_SESSION['user']['email']?></h4>
           </div>
           <form action="proses_logout.php">
             <button type="submit" class="btn btn-danger">LOG OUT</button>
@@ -60,7 +60,7 @@
         <div id="content">
           <div class="title">
           <h5><b>Toko Kami menyediakan berbagai macam kebutuhan peralatan sepak bola anda dengan berbagai merek dan harga yang terjangkau :)</b></h5>
-          <h6>Temukan Kebutuhan anda di toko kami</h6>
+          <h6>Temukan Kebutuhan anda di toko kami <?=$_SESSION['user']['username']?></h6>
         </div>
           <hr>
 

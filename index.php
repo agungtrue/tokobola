@@ -55,7 +55,7 @@
     </div>
 
       <div id="content">
-        <h4> Temukan Kebutuhan Anda! </h4>
+        <marquee scrollamount="12"><h4 style="color: orange;"> Temukan Kebutuhan Anda! Ingat bola? Ingat TOKBOL!!! </h4></marquee>
         <hr> <br>
 
         <video width="100%" height="50%" style="border:5px solid;" controls autoplay>
@@ -67,18 +67,21 @@
 
         <div id="main">
           <div class="login">
-          <h5> Login </h5>
+          <center>
+          <h4> LOG IN </h4>
             <form action="<?=$_SERVER['PHP_SELF']?>" method="post">
               Username <p style="color:white;  width:50%; background-color:red; text-align:center;"><?=isset($username_error_message) ? $username_error_message : ''?></p>
               <input type="text" name="username" placeholder="Username" value="" required/> <br><br>
               Password <p style="color:white; width:50%; background-color:red; text-align:center;"><?=isset($password_error_message) ? $password_error_message : ''?></p>
               <input type="password" name="password" placeholder="Password" value="" required/><br><br>
-              <input class="masuk" type="submit" name="masuk" value="Masuk"/>
-            </form><br><br><hr>
+              <input class="masuk" type="submit" name="masuk" value="LOG IN" style="background-color:orange; color:white;"/>
+            </form>
+          </center>
+          <br><br><hr>
           </div>
 
             <div class="daftar">
-              <h5> Daftar </h5>
+              <center><h4> REGISTER </h4></center>
                 <form action="proses_daftar.php" method="post">
                   <div class="alert alert-error"> <?php  ?> </div>
                 <table>
@@ -94,7 +97,7 @@
                     <td>Jenis Kelamin</td>
                     <td>
                       <select class="gender" name="gender">
-                        <option value="">---- Pilih Jenis Kelamin ---</option>
+                        <option value="">--Pilih Jenis Kelamin--</option>
                         <option value="L">Laki-laki</option>
                         <option value="P">Perempuan</option>
                       </select>
@@ -121,7 +124,7 @@
                   </tr>
                   <tr>
                     <td colspan="2"> <br><br>
-                    <input class="floatdaftar" type="submit" name="submit" value="Daftar"/><br>
+                    <input class="floatdaftar" type="submit" name="submit" value="REGISTER" style="background-color:orange; color:white;" /><br>
                     </td>
                   </tr>
                 </table>
@@ -136,7 +139,6 @@
                     <li><a href="#" target="_blank" class="normaltip" title="facebook"><img src="image/fb.png" style="height:31px; width:31px;" alt=""> </a></li>
                     <li><a href="#" target="_blank" class="normaltip" title="Instagram"><img src="image/ig.png" style="height:31px; width:31px;" alt=""> </a></li>
                     <li><a href="#" target="_blank" class="normaltip" title="Twitter"><img src="image/tw.png" style="height:31px; width:31px;" alt=""> </a></li>
-
       						</ul>
             <div class="copyright">
             Copyright &copy: 2017 Team Uler
