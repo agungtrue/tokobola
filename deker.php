@@ -57,21 +57,21 @@
             <div class="row">
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker1.jpg" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="image/deker/deker12.jpg" alt="Nike EPL" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker2.jpg" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="image/deker/deker13.jpeg" alt="Nike EPL" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker3.jpg" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="image/deker/deker14.jpg" alt="Nike EPL" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
@@ -87,14 +87,14 @@
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker5.jpg" alt="Nike EPL"  style="width:180px; height:170px;">
+                  <img src="image/deker/deker15.jpg" alt="Nike EPL"  style="width:180px; height:170px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker6.jpg" alt="Nike EPL"  style="width:180px; height:170px;">
+                  <img src="image/deker/deker16.jpg" alt="Nike EPL"  style="width:180px; height:170px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
@@ -108,7 +108,7 @@
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/deker/deker8.jpg" alt="Nike EPL" style="width:180px; height:170px;">
+                  <img src="image/deker/deker17.jpg" alt="Nike EPL" style="width:180px; height:170px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
                   <br><br>

@@ -100,7 +100,7 @@
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/jersey/jersey6.jpg" alt="Nike EPL" style="width:180px; height:170px;">
+                  <img src="image/jersey/persib.png" alt="Nike EPL" style="width:180px; height:170px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>

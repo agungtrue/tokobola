@@ -71,7 +71,7 @@
 
               <div class="col-md-3">
                   <h4>Nike Epl</h4>
-                  <img src="image/sepatu/sepatu4.jpg" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="image/sepatu/sepatu10.jpeg" alt="Nike EPL" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp.149.999 </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>

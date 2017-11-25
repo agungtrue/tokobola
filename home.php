@@ -113,13 +113,12 @@
             <hr>
             <div class="list">
             <ul><br>
-              <li><a href="bola.php"><img src="image/bola.png">Bola</a></li><br>
-              <li><a href="deker.php"><img src="image/deker.png">Deker</a></li><br>
-              <li><a href="jersey.php"><img src="image/jersey.png">Jersey</a></li><br>
-              <li><a href="sepatu.php"><img src="image/sepatu.png">Sepatu</a></li><br>
-              <li><a href="kaoskaki.php"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
-              <li><a href="sarungtangan.php"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br>
-
+              <li><a href="product.php?kategori_id=1"><img src="image/bola.png">Bola</a></li><br>
+              <li><a href="product.php?kategori_id=2"><img src="image/deker.png">Deker</a></li><br>
+              <li><a href="product.php?kategori_id=3"><img src="image/jersey.png">Jersey</a></li><br>
+              <li><a href="product.php?kategori_id=4"><img src="image/sepatu.png">Sepatu</a></li><br>
+              <li><a href="product.php?kategori_id=5"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
+              <li><a href="product.php?kategori_id=6"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br>
             </ul>
           </div>
         </div>
