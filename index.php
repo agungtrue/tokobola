@@ -36,7 +36,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/style2.css">
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -97,7 +97,7 @@
                     <td>Jenis Kelamin</td>
                     <td>
                       <select class="gender" name="gender">
-                        <option value="">--Pilih Jenis Kelamin--</option>
+                        <option value="">--- Pilih Jenis Kelamin ---</option>
                         <option value="L">Laki-laki</option>
                         <option value="P">Perempuan</option>
                       </select>
@@ -107,7 +107,7 @@
                   <tr>
                     <td>Alamat</td>
                     <td>
-                      <textarea class="alamat" name="alamat" placeholder="Alamat Lengkap" required cols="30" rows="5"></textarea>
+                      <textarea cols="20" rows="4" class="alamat" name="alamat" placeholder="Alamat Lengkap" required cols="30" rows="5"></textarea>
                     </td>
                   </tr>
                   <tr>

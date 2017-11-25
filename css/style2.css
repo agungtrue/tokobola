@@ -25,7 +25,8 @@
 #header .selamat {margin-top: 20px;}
 
 .kanan {text-align: right; }
-
+input {text-align: center;}
+textarea {text-align: center;}
 
 #content {
   float: left;
