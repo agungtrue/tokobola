@@ -19,6 +19,9 @@
   }
 
 
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -27,7 +30,7 @@
     <link rel="stylesheet" type="text/css" href="css/style1.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta charset="utf-8">
-    <title>Bola</title>
+    <title>Produk</title>
   </head>
 
     <body>
@@ -74,7 +77,7 @@
               ?>
               <div class="col-md-3">
                   <h4> <?= $item_produk['nama_produk'] ?> </h4>
-                  <img src="image/bola/bola11.jpg" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="<?= $item_produk['images'] ?>" alt="Nike EPL" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp <?= $item_produk['harga_produk'] ?> </p>
                   <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
               </div>
@@ -100,7 +103,7 @@
               <?php
                 foreach ($kategori_produk as $key => $item_kategori_produk) {
                ?>
-              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"><img src="image/bola.png"><?= $item_kategori_produk['nama_kategori']?></a></li><br>
+              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"><img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
               <?php
                 }
                ?>
