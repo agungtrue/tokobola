@@ -54,7 +54,7 @@
 
         <div class="logout-user">
           <div class="user">
-            <h4>  </h4>
+            Anda Bisa menjual untuk orang banyak, <a href="iklan_user.php"> Klik Disini!!!</a>
           </div>
           <form action="proses_logout.php">
             <button type="submit" class="btn btn-danger" onclick="alert('Apa Anda yakin keluar?')">LOG OUT</button>
@@ -64,7 +64,7 @@
 
         <div id="content">
           <div class="title">
-          <h5><b>Toko Kami menyediakan berbagai macam Bola dengan berbagai merek dan harga yang terjangkau :)</b></h5>
+          <h5><b>Toko Kami menyediakan berbagai macam kebutuhan Sepak Bola dengan berbagai merek dan harga yang terjangkau :)</b></h5>
           <h6>Temukan Bola yang anda inginkan</h6>
         </div>
           <hr>
@@ -103,7 +103,7 @@
               <?php
                 foreach ($kategori_produk as $key => $item_kategori_produk) {
                ?>
-              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"><img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
+              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"> <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
               <?php
                 }
                ?>
