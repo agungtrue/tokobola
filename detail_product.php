@@ -1,6 +1,25 @@
 <?php
-  session_start();
-  include_once 'php/database.php';
+session_start();
+include_once 'php/database.php';
+
+$kategori_id = $_GET['kategori_id'];
+
+
+$sql = "SELECT * FROM `produk` WHERE id = $kategori_id";
+$query = mysqli_query($koneksi, $sql);
+$produk = [];
+while ($row = mysqli_fetch_array($query)) {
+  $produk[] = $row;
+}
+
+$sql = "SELECT * FROM `kategori_produk`";
+$query = mysqli_query($koneksi, $sql);
+$kategori_produk = [];
+while ($row = mysqli_fetch_array($query)) {
+  $kategori_produk[] = $row;
+}
+
+
 
 
 
@@ -10,12 +29,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style-3.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Nike EPL 1</title>
+
+    <style media="screen">
+      .info-penjual td {padding: 10px;}
+    </style>
+
   </head>
 
     <body>
@@ -47,48 +71,59 @@
         <hr>
 
         <div id="content">
-          <h5><b>Nike EPL 1 </b></h5>
-          <h6></h6>
-          <hr>
+          <?php
+            foreach ($produk as $key => $item_produk) {
+          ?>
 
           <div class="item">
-            <img src="image/ball1.png"><br><br>
-            <p class="price"> Harga Rp.149.999 </p>
-
-
+            <center>
+            <h5><h3> <?= $item_produk['nama_produk'] ?> </h3> </b></h5>
+            <img src="<?= $item_produk['images'] ?>"><br><br>
+            <p class="price" style=""> <b> Rp. <?= $item_produk['harga_produk'] ?> </b> </p>
+          </center>
           </div>
 
-          <div class="info">
-            <p style="text-align:center;">Spesifikasi</p>
+
+          <div class="info-spesifikasi">
+            <p style="text-align:center;"> <?= $item_produk['spesifikasi_produk'] ?> </p>
           </div>
 
-          <div class="info">
-            <p></p>
+          <div class="info-ket">
+            <img src="image/attention.png" alt="" style="width:50px; height:50px; margin:0px;">
+            <p>  <q> Mohon untuk berhati-hati terhadap penipuan. Konfirmasi dan cari tau penjual/pengiklan. </q> </p>
           </div>
 
-          <div class="info">
+          <div class="info-penjual">
             <table>
               <tr>
                 <td>Nama Penjual</td>
                 <td>:</td>
+                <td> </td>
               </tr>
+
               <tr>
                 <td>Alamat </td>
                 <td>:</td>
-
+                <td> <?= $item_produk['alamat_penjual'] ?></td>
               </tr>
               <tr>
                 <td>No HP </td>
                 <td>:</td>
+                <td><?= $item_produk['no_hp_penjual'] ?></td>
               </tr>
               <tr>
                 <td>E-Mail</td>
                 <td>:</td>
+                <td></td>
               </tr>
             </table>
           </div>
 
         </div>
+
+        <?php
+          }
+        ?>
 
 
 
@@ -98,17 +133,15 @@
             <hr>
 
             <ul><br>
-              <li><a href="bola.php"><img src="image/bola.png">Bola</a></li><br>
-              <li><a href="deker.php"><img src="image/deker.png">Deker</a></li><br>
-              <li><a href="jersey.php"><img src="image/jersey.png">Jersey</a></li><br>
-              <li><a href="sepatu.php"><img src="image/sepatu.png">Sepatu</a></li><br>
-              <li><a href="kaoskaki.php"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
-              <li><a href="sarungtangan.php"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br>
-
+              <?php
+                foreach ($kategori_produk as $key => $item_kategori_produk) {
+               ?>
+              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"> <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
+              <?php
+                }
+               ?>
+            <br>
             </ul>
-
-
-
 
 
         </div>

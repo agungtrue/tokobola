@@ -4,6 +4,7 @@
 
   $kategori_id = $_GET['kategori_id'];
 
+  // ambil data dari table 'produk'
   $sql = "SELECT * FROM `produk` WHERE id_kategori_produk = $kategori_id";
   $query = mysqli_query($koneksi, $sql);
   $produk = [];
@@ -11,6 +12,7 @@
     $produk[] = $row;
   }
 
+  // ambil data dari table 'kategori_produk'
   $sql = "SELECT * FROM `kategori_produk`";
   $query = mysqli_query($koneksi, $sql);
   $kategori_produk = [];
@@ -21,13 +23,12 @@
 
 
 
-
 ?>
 
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style1-2.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta charset="utf-8">
     <title>Produk</title>
@@ -72,14 +73,18 @@
           <!-- main content bootstrap -->
           <div class="col-md-12">
             <div class="row">
+
+              <!-- Memecah dan looping semua data dari table 'produk' -->
               <?php
                 foreach ($produk as $key => $item_produk) {
               ?>
               <div class="col-md-3">
                   <h4> <?= $item_produk['nama_produk'] ?> </h4>
-                  <img src="<?= $item_produk['images'] ?>" alt="Nike EPL" style="width:180px; height:150px;">
+                  <img src="<?= $item_produk['images'] ?>" alt="<?= $item_produk['nama_produk'] ?>" style="width:180px; height:150px;">
                   <p class="price"> Harga : Rp <?= $item_produk['harga_produk'] ?> </p>
-                  <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link" href="nike-epl-1.php"> Selengkapnya</a> </button>
+                  <button type="button" class="btn btn-sm btn-success" data toggle="modal" data-target="#"> <a class="link"
+                    href="detail_product.php?kategori_id=<?= $item_produk['id']?>"> Selengkapnya</a> </button>
+                  <br><br><br>
               </div>
               <?php
                 }
@@ -96,10 +101,11 @@
 
         <div id="menu">
           <br>
-            <h5 class="tokbol"> Toko Bola </h5>
+            <h5 class="tokbol"> Kategori Produk <img src="image/logotokbol.png" style="width:150px; height:auto;" alt=""> </h5>
             <hr>
-
             <ul><br>
+
+              <!-- Memecah dan looping semua data dari table 'kategori_produk' -->
               <?php
                 foreach ($kategori_produk as $key => $item_kategori_produk) {
                ?>

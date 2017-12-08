@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 1300px;
-  background-color: white;
+  background-color: #F7F6F9;
 }
 
 /* #header */
@@ -41,6 +41,8 @@
 .logout-user {margin-bottom: 30px;}
 .btn-danger { float: right;  margin-right: 20px;}
 .user {float: left; margin-left: 20px;}
+.user a {color: orange;}
+.user a:hover {color:blue;}
 
 /* /#header */
 
@@ -95,7 +97,7 @@
   clear: both;
   padding: 10px;
   text-align:left;
-  background-color:	#F5F5F5;
+  background-color:	white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -134,8 +136,14 @@
 
 /* Bootstrap code - #content*/
 #content .col-md-3{
-  border: 1px solid;
   text-align: center;
+  padding : 20px;
+}
+
+#content .col-md-12{
+  text-align: center;
+  background-color: white;
+  margin-left: 20px;
 }
 
 #content .col-md-3 h4 {text-align: center;}
@@ -149,6 +157,7 @@
 }
 
 #content .col-md-3 a { text-decoration: none; color: white; }
+#content .col-md-3 a:hover {color: orange; }
 
 /* /Bootstrap code - #content*/
 

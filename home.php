@@ -11,7 +11,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style1.css">
+    <link rel="stylesheet" type="text/css" href="css/style1-1.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
       <div id="container">
         <div id="header">
           <div class="logo">
-          <a href="proses_login.php" id="logo"> <img src="image/logotokbol.png"/></a>
+          <a href="home.php" id="logo"> <img src="image/logotokbol.png"/></a>
         </div>
           <div class="test">
             <b>Toko Bola Termurah dan Terpercaya!</b><br>
@@ -122,7 +122,8 @@
                 </ul>
               </div>
             </div>
-          </div>
+
+      </div>
 
 
         <div id="footer">

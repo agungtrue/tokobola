@@ -2,6 +2,12 @@
   session_start();
   include_once 'php/database.php';
 
+  $sql = "SELECT * FROM `kategori_produk`";
+  $query = mysqli_query($koneksi, $sql);
+  $kategori_produk = [];
+  while ($row = mysqli_fetch_array($query)) {
+    $kategori_produk[] = $row;
+  }
 
 
 
@@ -52,7 +58,7 @@
           </div>
 
           <div class="form-penjual">
-          <form class="penjual" action="iklan_submit.php" method="post">
+          <form class="penjual" action="iklan_submit.php" method="post" enctype="multipart/form-data">
             <center>
               <table>
                 <!--<tr>
@@ -69,6 +75,20 @@
                   <td>Harga Produk</td>
                   <td>:</td>
                   <td> <input type="text" name="harga_produk" value="" placeholder="Harga Produk" required> </td>
+                </tr>
+                <tr>
+                  <td>Kategori Produk</td>
+                  <td>:</td>
+                  <td>
+                    <select class="" name="id_kategori_produk">
+                      <option value="1">Bola</option>
+                      <option value="2">Deker</option>
+                      <option value="3">Jersey</option>
+                      <option value="4">Sepatu</option>
+                      <option value="5">Kaos Kaki</option>
+                      <option value="6">Sarung Tangan</option>
+                    </select>
+                  </td>
                 </tr>
                 <tr>
                   <td>Foto Produk</td>
@@ -98,6 +118,7 @@
               </table>
               <br>
               <input class="submit-iklan" type="submit" name="submit" value="Submit" style="background-color:orange;">
+              <input class="submit-iklan" type="reset" name="submit" value="Reset" style="background-color:orange;">
             </center>
           </form>
         </div>
@@ -107,17 +128,18 @@
 
         <div id="menu">
           <br>
-            <h5 class="tokbol"> Toko Bola </h5>
+            <h5 class="tokbol"> Kategori Produk <img src="image/logotokbol.png" style="width:150px; height:auto;" alt=""> </h5>
             <hr>
 
             <ul><br>
-              <li><a href="bola.php"><img src="image/bola.png">Bola</a></li><br>
-              <li><a href="deker.php"><img src="image/deker.png">Deker</a></li><br>
-              <li><a href="jersey.php"><img src="image/jersey.png">Jersey</a></li><br>
-              <li><a href="sepatu.php"><img src="image/sepatu.png">Sepatu</a></li><br>
-              <li><a href="kaoskaki.php"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
-              <li><a href="sarungtangan.php"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br>
-
+              <?php
+                foreach ($kategori_produk as $key => $item_kategori_produk) {
+               ?>
+              <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"> <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
+              <?php
+                }
+               ?>
+              <br>
             </ul>
 
 

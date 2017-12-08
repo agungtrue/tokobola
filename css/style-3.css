@@ -7,7 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   width: 1300px;
-  background-color: white;
+  background-color: #F7F6F9;
 }
 
 /* #header */
@@ -41,7 +41,6 @@
 .logout-user {margin-bottom: 30px;}
 .btn-danger { float: right;  margin-right: 20px;}
 .user {float: left; margin-left: 20px;}
-
 /* /#header */
 
 
@@ -70,6 +69,8 @@
   float: left;
   width: 65%;
   margin-bottom: 90px;
+  background-color: white;
+  padding: 20px;
 }
 
 #content img {
@@ -95,7 +96,7 @@
   clear: both;
   padding: 10px;
   text-align:left;
-  background-color:	#F5F5F5;
+  background-color:	white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -154,12 +155,17 @@
 
 
 /* #content item code */
-#content .item {float: left; width: 60%;}
+#content { margin-left: 20px;}
+#content .item {float: left; width: 60%; padding: 40px;}
 #content .item img {
-  width: 500px;
-  height: 10px;
+  width: 300px;
+  height: auto;
 }
+
 #content .price  {text-align: center;}
 
-#content .info {float: right; width: 40%; border: 1px solid; margin-bottom: 20px; padding: 10px;}
+#content .info-spesifikasi {float: right; width: 40%; border: 2px solid; margin-bottom: 20px; padding: 10px;  background-color: #F8F8FF;}
+#content .info-ket {float: right; width: 40%; border: 2px solid; margin-bottom: 20px; padding: 10px; text-align: center; background-color: #F8F8FF;}
+#content .info-penjual {float: right; width: 40%; border: 2px solid; margin-bottom: 20px; padding: 10px; background-color: #F8F8FF;}
+
 /* /#content item code */
