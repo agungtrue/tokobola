@@ -141,7 +141,7 @@
                     <li><a href="#" target="_blank" class="normaltip" title="Twitter"><img src="image/tw.png" style="height:31px; width:31px;" alt=""> </a></li>
       						</ul>
             <div class="copyright">
-            Copyright &copy: 2017 Team Uler
+            Copyright &copy; 2017 Team Uler
             </div>
 
           </div>

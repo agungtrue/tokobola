@@ -1,0 +1,171 @@
+@font-face {
+  src: url(fonts/Inconsolata-Regular.ttf);
+  font-family: Inconsolata-Regular;
+}
+
+#container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1300px;
+  background-color: #F7F6F9;
+}
+
+/* #header */
+#header {
+  background-color: #FF8C00;
+  color: white;
+  padding : 10px;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.logo {width: 40%; }
+.test {width: 30%; margin-top: 20px;}
+.pencarian {width: 40%;}
+.padding {padding-top: 30px; margin-left: 50px;}
+
+#header img {
+  width: 150px;
+  height: 100px;
+
+}
+
+#main {
+  width: 100%;
+  height: 100%;
+}
+
+
+#carouselExampleIndicators { background-color: orange;}
+
+.logout-user {margin-bottom: 30px;}
+.btn-danger { float: right;  margin-right: 20px;}
+.user {float: left; margin-left: 20px;}
+/* /#header */
+
+
+/* #menu */
+#menu {
+  float: right;
+  width: 30%;
+  background-color: #FFFACD;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: auto;
+  margin-right: 20px;
+}
+
+#menu ul {list-style: none;}
+#menu a { text-decoration: none; color: black;}
+#menu a:hover { color: orange;  padding: 10px;}
+#menu a:active {color: blue;}
+#menu img {width: 70px; height: 50px; padding-right: 20px;}
+#menu .tokbol  {text-align: center;}
+/* /#menu */
+
+/* #content */
+#content {
+  float: left;
+  width: 65%;
+  margin-bottom: 90px;
+  background-color: white;
+  padding: 20px;
+}
+
+#content img {
+  width: 870px;
+  height: 450px;
+  padding: 10px;
+
+
+}
+
+#carouselExampleIndicators {
+  margin-top: 50px;
+}
+
+#content .title h5, h6 { margin-left: 20px;}
+
+.form-penjual td { padding: 5px;}
+/* /#contet */
+
+
+/* #footer */
+#footer {
+  clear: both;
+  padding: 10px;
+  text-align:left;
+  background-color:	white;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#footer .copyright {
+  text-align: right;
+  padding-bottom: 10px;
+  margin-right: 20px;
+}
+
+#footer .alamat {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#footer .alamat a {
+  text-decoration: none; color: black;
+}
+
+#footer .alamat a:hover {
+  color: orange;
+}
+
+#footer .sosmed{
+  text-align: left;
+  float: left;
+  padding-top: 60px;
+}
+
+.h5 {margin-left: 38px; }
+#icons {padding:5px}
+#icons li {padding:10px; float: left;}
+#footer ul{list-style: none;}
+/* /#footer */
+
+
+/* Bootstrap code - #content*/
+#content .col-md-3{
+  border: 1px solid;
+  text-align: center;
+}
+
+#content .col-md-3 h4 {text-align: center;}
+
+#content .col-md-3 img{
+  width: 180px;
+}
+
+#content .price {
+  text-align: center;
+}
+
+#content .col-md-3 a { text-decoration: none; color: white; }
+
+/* /Bootstrap code - #content*/
+
+
+/* #content item code */
+#content { margin-left: 20px;}
+#content .item {float: left; width: 60%; padding: 40px;}
+#content .item img {
+  width: 300px;
+  height: auto;
+}
+
+#content .price  {text-align: center;}
+
+#content .info-spesifikasi {float: right; width: 40%; border: 2px solid; margin-bottom: 20px; margin-top: 80px; padding: 10px;  background-color: #F8F8FF;}
+#content .info-ket {float: right; width: 40%; border: 2px solid; margin-bottom: 20px; padding: 10px; text-align: center; background-color: #F8F8FF;}
+#content .info-penjual {float: left; width: 100%; border: 2px solid; margin-bottom: 20px; padding: 10px; background-color: #F8F8FF;}
+
+/* /#content item code */

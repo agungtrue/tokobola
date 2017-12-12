@@ -4,8 +4,8 @@ include_once 'php/database.php';
 
 if (isset($_POST['submit'])) {
 
-  /*$nama_penjual = $_POST['nama_lengkap'];*/
   /*ambil data dari form */
+  $nama_penjual = $_POST['nama_lengkap'];
   $nama_produk_penjual = $_POST['nama_produk'];
   $harga_produk_penjual = $_POST['harga_produk'];
   $kategori_produk_penjual = $_POST['id_kategori_produk'];
@@ -29,18 +29,6 @@ if (isset($_POST['submit'])) {
       } elseif ($kategori_produk_penjual == "6") {
         $path = "image/sarungtangan/". basename($_FILES['images']['name']);
       }
-
-
-      if (move_uploaded_file($_FILES['image']['tmp_name'], $path)) {
-        echo "Image telah berhasil di upload";
-      } else {
-        echo "Image gagal di upload";
-      }
-
-
-
-
-
 
   //var_dump($path);
 
@@ -101,31 +89,73 @@ if (isset($_POST['submit'])) {
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title></title>
   </head>
   <body>
+
+  <div id="container">
+    <div id="header">
+      <a href="home.php" id="logo"> <img src="image/logotokbol.png"/></a>
+      <div class="selamat">
+      </div>
+
+    </div>
+
+    <div id="content">
+
     <?php
 
-    //Proses data ke database
-    $penjual = true;
 
-    if ($penjual) {
+    //cek apabila upload image berhasil atau tidak
+    if (move_uploaded_file($_FILES['images']['tmp_name'], $path)) {
+      echo 'Image telah berhasil di upload <img src="image/success.gif" style="width:200px; height:100px;"/> <br>';
+    } else {
+      echo "Image gagal di upload";
+    }
 
-            $sql =  mysqli_query($koneksi, "INSERT INTO produk (nama_produk, harga_produk, id_kategori_produk, images, alamat_penjual, no_hp_penjual, spesifikasi_produk)
-            VALUES ('$nama_produk_penjual', '$harga_produk_penjual', '$kategori_produk_penjual', '$path', '$alamat_penjual', '$hp_penjual',
-                '$spek_item_penjual')");
-                echo "Berhasil";
-                $penjual = true;
+
+  //Proses data ke database
+  $penjual = true;
+
+  if ($penjual) {
+
+    $sql =  mysqli_query($koneksi, "INSERT INTO produk (nama_penjual, nama_produk, harga_produk, id_kategori_produk, images, alamat_penjual, no_hp_penjual, email_penjual, spesifikasi_produk)
+    VALUES ('$nama_penjual', '$nama_produk_penjual', '$harga_produk_penjual', '$kategori_produk_penjual', '$path', '$alamat_penjual', '$hp_penjual',
+            '$email_penjual', '$spek_item_penjual')");
+            echo 'Data penjual BERHASIL masuk ke database <img src="image/success.gif" style="width:200px; height:100px;"/>';
+            $penjual = true;
           } else {
-            echo "Gagal";
+            echo "Data penjual GAGAL masuk ke database";
             $penjual = false;
           }
 
-
-
      ?>
 
+     <br><br>
+      <a href="iklan_user.php" style="color:orange;"> Kembali Ke Menu </a>
 
+   </div>
+
+   <div id="footer">
+     <hr>
+           <h5 class="h5">Follow Us </h5>
+           <ul id="icons">
+             <li><a href="#" target="_blank" class="normaltip" title="facebook"><img src="image/fb.png" style="height:31px; width:31px;" alt=""> </a></li>
+             <li><a href="#" target="_blank" class="normaltip" title="Instagram"><img src="image/ig.png" style="height:31px; width:31px;" alt=""> </a></li>
+             <li><a href="#" target="_blank" class="normaltip" title="Twitter"><img src="image/tw.png" style="height:31px; width:31px;" alt=""> </a></li>
+
+           </ul>
+     <div class="copyright">
+     Copyright &copy; 2017 Team Uler
+     </div>
+
+   </div>
+
+   </div>
   </body>
 </html>

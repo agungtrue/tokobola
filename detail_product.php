@@ -29,7 +29,7 @@ while ($row = mysqli_fetch_array($query)) {
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="css/style-3.css">
+    <link rel="stylesheet" type="text/css" href="css/style3.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -98,7 +98,7 @@ while ($row = mysqli_fetch_array($query)) {
               <tr>
                 <td>Nama Penjual</td>
                 <td>:</td>
-                <td> </td>
+                <td> <?= $item_produk['nama_penjual'] ?> </td>
               </tr>
 
               <tr>
@@ -114,7 +114,7 @@ while ($row = mysqli_fetch_array($query)) {
               <tr>
                 <td>E-Mail</td>
                 <td>:</td>
-                <td></td>
+                <td> <?= $item_produk['email_penjual'] ?> </td>
               </tr>
             </table>
           </div>

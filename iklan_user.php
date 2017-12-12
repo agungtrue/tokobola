@@ -61,11 +61,11 @@
           <form class="penjual" action="iklan_submit.php" method="post" enctype="multipart/form-data">
             <center>
               <table>
-                <!--<tr>
+                <tr>
                   <td>Nama Penjual</td>
                   <td>: &emsp;</td>
                   <td> <input type="text" name="nama_lengkap" value="" placeholder="Nama Lengkap" required>  </td>
-                </tr>-->
+                </tr>
                 <tr>
                   <td>Nama Produk</td>
                   <td>:</td>
@@ -93,7 +93,7 @@
                 <tr>
                   <td>Foto Produk</td>
                   <td>:</td>
-                  <td> <input type="file" name="images" value="" placeholder="Upload Foto Produk" required>  </td>
+                  <td> <input type="file" name="images" placeholder="Upload Foto Produk" required>  </td>
                 </tr>
                 <tr>
                   <td>Alamat</td>
