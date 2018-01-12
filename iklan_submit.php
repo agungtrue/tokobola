@@ -1,19 +1,22 @@
 <?php
 include_once 'php/database.php';
+session_start();
 
 
 if (isset($_POST['submit'])) {
 
   /*ambil data dari form */
-  $nama_penjual = $_POST['nama_lengkap'];
   $nama_produk_penjual = $_POST['nama_produk'];
   $harga_produk_penjual = $_POST['harga_produk'];
   $kategori_produk_penjual = $_POST['id_kategori_produk'];
   $foto_produk_penjual = $_FILES['images']['name'];
   $alamat_penjual = $_POST['alamat'];
   $hp_penjual = $_POST['no_hp'];
-  $email_penjual = $_POST['email'];
   $spek_item_penjual = $_POST['spesifikasi_produk'];
+
+  //mengambil id_member dari variable Session
+  $id_penjual =  $_SESSION['user']['id_member'];
+
 
       /* Setting path folder penyimpanan foto*/
       if ($kategori_produk_penjual == "1") {
@@ -30,7 +33,7 @@ if (isset($_POST['submit'])) {
         $path = "image/sarungtangan/". basename($_FILES['images']['name']);
       }
 
-  //var_dump($path);
+  var_dump($path);
 
 
 
@@ -123,10 +126,8 @@ if (isset($_POST['submit'])) {
   $penjual = true;
 
   if ($penjual) {
-
-    $sql =  mysqli_query($koneksi, "INSERT INTO produk (nama_penjual, nama_produk, harga_produk, id_kategori_produk, images, alamat_penjual, no_hp_penjual, email_penjual, spesifikasi_produk)
-    VALUES ('$nama_penjual', '$nama_produk_penjual', '$harga_produk_penjual', '$kategori_produk_penjual', '$path', '$alamat_penjual', '$hp_penjual',
-            '$email_penjual', '$spek_item_penjual')");
+    $sql =  mysqli_query($koneksi, "INSERT INTO produk (nama_produk, harga_produk, id_kategori_produk, id_member, spesifikasi_produk, images, no_hp_penjual)
+    VALUES ('$nama_produk_penjual', '$harga_produk_penjual', '$kategori_produk_penjual', $id_penjual, '$spek_item_penjual', '$path', '$hp_penjual')");
             echo 'Data penjual BERHASIL masuk ke database <img src="image/success.gif" style="width:200px; height:100px;"/>';
             $penjual = true;
           } else {

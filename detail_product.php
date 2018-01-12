@@ -2,17 +2,26 @@
 session_start();
 include_once 'php/database.php';
 
-$kategori_id = $_GET['kategori_id'];
+$kategori_id = $_GET['produk_id'];
 
 
-$sql = "SELECT * FROM `produk` WHERE id = $kategori_id";
+// $sql = "SELECT * FROM `produk` WHERE id = $kategori_id";
+//sql untuk menampilkan data di halaman detail_product
+$sql = "SELECT produk.id, produk.nama_produk, produk.harga_produk, produk.id_kategori_produk, produk.spesifikasi_produk, produk.images,
+produk.no_hp_penjual, produk.id_member, member.id_member, member.nama_lengkap, member.email, member.alamat, kategori_produk.id,
+kategori_produk.nama_kategori, kategori_produk.images
+as image_kategori_produk FROM `produk` JOIN `member` ON `produk`.`id_member` = `member`.`id_member` JOIN `kategori_produk` ON `produk`.`id_kategori_produk` = `kategori_produk`.`id`
+WHERE `produk`.id = $kategori_id";
+
 $query = mysqli_query($koneksi, $sql);
 $produk = [];
 while ($row = mysqli_fetch_array($query)) {
   $produk[] = $row;
 }
 
+//sql untuk mengambil data dari table kategori_produk
 $sql = "SELECT * FROM `kategori_produk`";
+
 $query = mysqli_query($koneksi, $sql);
 $kategori_produk = [];
 while ($row = mysqli_fetch_array($query)) {
@@ -34,8 +43,13 @@ while ($row = mysqli_fetch_array($query)) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nike EPL 1</title>
-
+    <?php
+      foreach ($produk as $key => $item_produk) {
+    ?>
+    <title><?= $item_produk['nama_produk'] ?> </title>
+    <?php
+  }
+     ?>
     <style media="screen">
       .info-penjual td {padding: 10px;}
     </style>
@@ -77,7 +91,8 @@ while ($row = mysqli_fetch_array($query)) {
 
           <div class="item">
             <center>
-            <h5><h3> <?= $item_produk['nama_produk'] ?> </h3> </b></h5>
+            <h2>  </h2>
+            <h3> <?= $item_produk['nama_produk'] ?> </h3>
             <img src="<?= $item_produk['images'] ?>"><br><br>
             <p class="price" style=""> <b> Rp. <?= $item_produk['harga_produk'] ?> </b> </p>
           </center>
@@ -98,13 +113,13 @@ while ($row = mysqli_fetch_array($query)) {
               <tr>
                 <td>Nama Penjual</td>
                 <td>:</td>
-                <td> <?= $item_produk['nama_penjual'] ?> </td>
+                <td> <?= $item_produk['nama_lengkap'] ?> </td>
               </tr>
 
               <tr>
                 <td>Alamat </td>
                 <td>:</td>
-                <td> <?= $item_produk['alamat_penjual'] ?></td>
+                <td> <?= $item_produk['alamat'] ?></td>
               </tr>
               <tr>
                 <td>No HP </td>
@@ -114,7 +129,7 @@ while ($row = mysqli_fetch_array($query)) {
               <tr>
                 <td>E-Mail</td>
                 <td>:</td>
-                <td> <?= $item_produk['email_penjual'] ?> </td>
+                <td> <?= $item_produk['email'] ?> </td>
               </tr>
             </table>
           </div>
@@ -157,7 +172,7 @@ while ($row = mysqli_fetch_array($query)) {
           </ul>
       <div class="copyright">
 
-    Copyright &copy: 2017 Team Uler
+    Copyright &copy; 2017 Team Uler
     </div>
 
         </div>

@@ -54,6 +54,7 @@
 
         <div id="content">
           <div class="penjual">
+            <p></p>
             <p>Anda bisa menjual berbagai macam kebutuhan Sepak Bola ke semua orang! Toko Bola memudahkan penjual dan pembeli. Isi form data penjual dengan baik dan benar.</p>
           </div>
 
@@ -61,14 +62,10 @@
           <form class="penjual" action="iklan_submit.php" method="post" enctype="multipart/form-data">
             <center>
               <table>
-                <tr>
-                  <td>Nama Penjual</td>
-                  <td>: &emsp;</td>
-                  <td> <input type="text" name="nama_lengkap" value="" placeholder="Nama Lengkap" required>  </td>
-                </tr>
+
                 <tr>
                   <td>Nama Produk</td>
-                  <td>:</td>
+                  <td>: &emsp;</td>
                   <td> <input type="text" name="nama_produk" value="" placeholder="Nama Produk" required> </td>
                 </tr>
                 <tr>
@@ -104,11 +101,6 @@
                   <td>No HP</td>
                   <td>:</td>
                   <td> <input type="text" name="no_hp" value="" placeholder="No HP" required> </td>
-                </tr>
-                <tr>
-                  <td>E-Mail</td>
-                  <td>:</td>
-                  <td> <input type="text" name="email" value="" placeholder="E-mail" required> </td>
                 </tr>
                 <tr>
                   <td>Spesifikasi</td>
@@ -159,7 +151,7 @@
           </ul>
       <div class="copyright">
 
-    Copyright &copy: 2017 Team Uler
+    Copyright &copy; 2017 Team Uler
     </div>
 
         </div>

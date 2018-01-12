@@ -13,10 +13,6 @@
   // Optional | bisa di isi atau tidak
 
 
-
-
-
-
   // if ($nama_lengkap == '') {
   //   echo "Silahkan di isi nama lengkap";
   // } elseif ($email == '') {
@@ -155,7 +151,7 @@
 
       						</ul>
             <div class="copyright">
-            Copyright &copy: 2017 Team Uler
+            Copyright &copy; 2017 Team Uler
             </div>
 
           </div>

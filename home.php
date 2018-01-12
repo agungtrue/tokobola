@@ -6,6 +6,14 @@
     header("Location: index.php");
   }
 
+  // ambil data dari table 'kategori_produk'
+  $sql = "SELECT * FROM `kategori_produk`";
+  $query = mysqli_query($koneksi, $sql);
+  $kategori_produk = [];
+  while ($row = mysqli_fetch_array($query)) {
+    $kategori_produk[] = $row;
+  }
+
 ?>
 
 <!DOCTYPE html>
@@ -113,12 +121,20 @@
             <hr>
               <div class="list">
                 <ul><br>
-                  <li><a href="product.php?kategori_id=1"><img src="image/bola.png">Bola</a></li><br>
+                  <?php
+                    foreach ($kategori_produk as $key => $item_kategori_produk) {
+                   ?>
+                   <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"> <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
+
+                  <!-- <li><a href="product.php?kategori_id=1"><img src="image/bola.png">Bola</a></li><br>
                   <li><a href="product.php?kategori_id=2"><img src="image/deker.png">Deker</a></li><br>
                   <li><a href="product.php?kategori_id=3"><img src="image/jersey.png">Jersey</a></li><br>
                   <li><a href="product.php?kategori_id=4"><img src="image/sepatu.png">Sepatu</a></li><br>
                   <li><a href="product.php?kategori_id=5"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
-                  <li><a href="product.php?kategori_id=6"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br>
+                  <li><a href="product.php?kategori_id=6"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br> -->
+                  <?php
+                }
+                   ?>
                 </ul>
               </div>
             </div>
@@ -145,7 +161,7 @@
 
       <div class="copyright">
 
-    Copyright &copy: 2017 Team Uler
+    Copyright &copy; 2017 Team Uler
     </div>
 
         </div>
