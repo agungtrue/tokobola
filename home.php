@@ -47,15 +47,24 @@
           </div>
           <div class="pencarian">
             <div class="padding">
-            <b>Pencarian</b>
-            <input type="text" name="pencarian" value="" placeholder="Cari..."/>
-            <input type="submit" class="" name="pencarian" value="Cari"/>
-          </div>
+              <b>Pencarian</b>
+                <input type="text" name="pencarian" value="" placeholder="Pencarian ini belum aktif"/>
+                <input type="submit" class="" name="pencarian" value="Cari"/>
+            </div>
           </div>
         </div>
 
         <div class="logout-user">
           <div class="user">
+            <p style="color:orange">
+            <?php
+            $hari = "<b>Hari : </b> " . date("Y-m-d") . '<br>';
+            $waktu = "<b>Jam : </b> " . date("H:i:s");
+
+            echo $hari;
+            echo $waktu;
+             ?>
+           </p>
             <h4> Selamat Datang <span style="color:orange;"> <?=$_SESSION['user']['username']?></span> | <span style="color:orange;"> <?=$_SESSION['user']['email']?> </span></h4>
           </div>
           <form action="proses_logout.php">
@@ -124,16 +133,14 @@
                   <?php
                     foreach ($kategori_produk as $key => $item_kategori_produk) {
                    ?>
-                   <li><a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>"> <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?></a></li><br>
-
-                  <!-- <li><a href="product.php?kategori_id=1"><img src="image/bola.png">Bola</a></li><br>
-                  <li><a href="product.php?kategori_id=2"><img src="image/deker.png">Deker</a></li><br>
-                  <li><a href="product.php?kategori_id=3"><img src="image/jersey.png">Jersey</a></li><br>
-                  <li><a href="product.php?kategori_id=4"><img src="image/sepatu.png">Sepatu</a></li><br>
-                  <li><a href="product.php?kategori_id=5"><img src="image/kaoskaki.png">Kaos Kaki</a></li><br>
-                  <li><a href="product.php?kategori_id=6"><img src="image/sarungtangan.png">Sarung Tangan</a></li><br> -->
+                   <li>
+                     <a href="product.php?kategori_id=<?= $item_kategori_produk['id'] ?>">
+                       <img src="<?= $item_kategori_produk['images'] ?>"> <?= $item_kategori_produk['nama_kategori']?>
+                     </a>
+                   </li>
+                   <br>
                   <?php
-                }
+                  }
                    ?>
                 </ul>
               </div>
@@ -174,3 +181,7 @@
     </body>
 
 </html>
+
+<script type="text/javascript">
+
+</script>

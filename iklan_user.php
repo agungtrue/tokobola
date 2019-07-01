@@ -21,7 +21,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Nike EPL 1</title>
+    <title>Iklan Produk</title>
   </head>
 
     <body>
@@ -91,11 +91,6 @@
                   <td>Foto Produk</td>
                   <td>:</td>
                   <td> <input type="file" name="images" placeholder="Upload Foto Produk" required>  </td>
-                </tr>
-                <tr>
-                  <td>Alamat</td>
-                  <td>:</td>
-                  <td> <input type="text" name="alamat" value="" placeholder="Alamat" required> </td>
                 </tr>
                 <tr>
                   <td>No HP</td>

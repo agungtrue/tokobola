@@ -10,12 +10,11 @@ if (isset($_POST['submit'])) {
   $harga_produk_penjual = $_POST['harga_produk'];
   $kategori_produk_penjual = $_POST['id_kategori_produk'];
   $foto_produk_penjual = $_FILES['images']['name'];
-  $alamat_penjual = $_POST['alamat'];
   $hp_penjual = $_POST['no_hp'];
   $spek_item_penjual = $_POST['spesifikasi_produk'];
 
   //mengambil id_member dari variable Session
-  $id_penjual =  $_SESSION['user']['id_member'];
+  $id_penjual = $_SESSION['user']['id_member'];
 
 
       /* Setting path folder penyimpanan foto*/
@@ -33,7 +32,7 @@ if (isset($_POST['submit'])) {
         $path = "image/sarungtangan/". basename($_FILES['images']['name']);
       }
 
-  var_dump($path);
+  //var_dump($path);
 
 
 

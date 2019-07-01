@@ -28,11 +28,6 @@ while ($row = mysqli_fetch_array($query)) {
   $kategori_produk[] = $row;
 }
 
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
